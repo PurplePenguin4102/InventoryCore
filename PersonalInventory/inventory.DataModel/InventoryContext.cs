@@ -7,6 +7,7 @@ namespace Inventory.DataModel
     {
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Possession> Possessions { get; set; }
+        public DbSet<Location> Locations { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
