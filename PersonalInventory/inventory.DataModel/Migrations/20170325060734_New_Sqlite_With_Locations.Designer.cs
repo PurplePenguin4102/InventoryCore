@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Inventory.DataModel;
 using Inventory.Domain.Enums;
 
-namespace inventory.DataModel.Migrations
+namespace Inventory.DataModel.Migrations
 {
     [DbContext(typeof(InventoryContext))]
-    [Migration("20170323085301_Added_Locations")]
-    partial class Added_Locations
+    [Migration("20170325060734_New_Sqlite_With_Locations")]
+    partial class New_Sqlite_With_Locations
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

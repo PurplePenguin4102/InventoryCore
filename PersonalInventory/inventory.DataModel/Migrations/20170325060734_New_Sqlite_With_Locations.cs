@@ -2,12 +2,26 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace inventory.DataModel.Migrations
+namespace Inventory.DataModel.Migrations
 {
-    public partial class initsqlite : Migration
+    public partial class New_Sqlite_With_Locations : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Locations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Room = table.Column<int>(nullable: false),
+                    TypeOfStorage = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Locations", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Owners",
                 columns: table => new
@@ -34,6 +48,7 @@ namespace inventory.DataModel.Migrations
                     Acquired = table.Column<DateTime>(nullable: false),
                     Category = table.Column<int>(nullable: false),
                     InUse = table.Column<bool>(nullable: false),
+                    LocationId = table.Column<int>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     OwnerId = table.Column<int>(nullable: true),
                     PartOfId = table.Column<int>(nullable: true),
@@ -42,6 +57,12 @@ namespace inventory.DataModel.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Possessions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Possessions_Locations_LocationId",
+                        column: x => x.LocationId,
+                        principalTable: "Locations",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Possessions_Owners_OwnerId",
                         column: x => x.OwnerId,
@@ -55,6 +76,11 @@ namespace inventory.DataModel.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Possessions_LocationId",
+                table: "Possessions",
+                column: "LocationId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Possessions_OwnerId",
@@ -71,6 +97,9 @@ namespace inventory.DataModel.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Possessions");
+
+            migrationBuilder.DropTable(
+                name: "Locations");
 
             migrationBuilder.DropTable(
                 name: "Owners");

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Inventory.DataModel;
 using Inventory.Domain.Enums;
 
-namespace inventory.DataModel.Migrations
+namespace Inventory.DataModel.Migrations
 {
     [DbContext(typeof(InventoryContext))]
     partial class InventoryContextModelSnapshot : ModelSnapshot
