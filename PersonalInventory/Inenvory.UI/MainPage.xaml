@@ -7,11 +7,24 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid>
+    <Grid x:Name="Body">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="400" MaxWidth="400" Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <ImageBrush Stretch="Fill" ImageSource="Assets/bkg.png"/>
         </Grid.Background>
-        <Grid />
-
+        <Grid Grid.ColumnSpan="2" />
+        <Grid x:Name="Owners">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Margin="0" TextWrapping="Wrap" Text="Owners" FontSize="36" Foreground="DarkSlateGray"/>
+        </Grid>
+        <!--<Rectangle Grid.Column="0" Fill="PaleVioletRed"/>
+        <Rectangle Grid.Column="1" Fill="PowderBlue"/>-->
+        
     </Grid>
 </Page>
