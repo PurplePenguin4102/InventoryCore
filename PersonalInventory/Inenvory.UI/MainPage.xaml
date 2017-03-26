@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Inenvory.UI"
     xmlns:domain="using:Inventory.Domain"
+    xmlns:converters="using:Inventory.UI.Converters"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -11,8 +12,10 @@
         <local:MainPageModel/>
     </Page.DataContext>
     <Page.Resources>
+        <converters:GenderToUnicodeConverter x:Key="GenderToUnicodeConverter"/>
         <DataTemplate x:Name="OwnerTemplate" x:DataType="domain:Owner">
             <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding Gender, Converter={StaticResource GenderToUnicodeConverter}}"/>
                 <TextBlock Text="{Binding LastName}" FontWeight="Bold" FontSize="22"/>
                 <TextBlock Text="{Binding FirstName}" FontSize="22"/>
                 <TextBlock Text="{Binding Birthday}" FontSize="22"/>

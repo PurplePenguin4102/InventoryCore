@@ -16,7 +16,7 @@ namespace Inenvory.UI
 
         public MainPageModel()
         {
-            if (DesignMode.DesignModeEnabled)
+            if (true)
             {
                 OwnerList = new ObservableCollection<Owner>
                 {
@@ -43,10 +43,22 @@ namespace Inenvory.UI
                         Gender = Gender.Male,
                         Type = OwnerTypes.Cat,
                         Birthday = new DateTime(1987, 07, 20)
+                    },
+                    new Owner
+                    {
+                        FirstName = "Phryne",
+                        LastName = "Fish-Eater",
+                        Gender = Gender.Female,
+                        Type = OwnerTypes.Cat,
+                        Birthday = new DateTime(1987, 07, 20)
                     }
-
                 };
             }
         }
+    }
+
+    public static class MyExtensions
+    {
+
     }
 }

@@ -7,7 +7,7 @@
     <ProjectGuid>{0163D5AB-8C08-4C70-9E91-7EA9F407EC09}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Inenvory.UI</RootNamespace>
+    <RootNamespace>Inventory.UI</RootNamespace>
     <AssemblyName>Inventory Helper</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
@@ -96,6 +96,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\GenderToUnicodeConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -157,9 +158,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\inventory.Domain\inventory.Domain.csproj">
+    <ProjectReference Include="..\inventory.Domain\Inventory.Domain.csproj">
       <Project>{89CE7D94-08E0-4FAD-9BA1-347BDF602FA6}</Project>
-      <Name>inventory.Domain</Name>
+      <Name>Inventory.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

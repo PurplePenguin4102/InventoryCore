@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\inventory.Domain\inventory.Domain.csproj" />
+    <ProjectReference Include="..\inventory.Domain\Inventory.Domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
