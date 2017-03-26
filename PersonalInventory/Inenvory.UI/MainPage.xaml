@@ -12,10 +12,10 @@
         <local:MainPageModel/>
     </Page.DataContext>
     <Page.Resources>
-        <converters:GenderToUnicodeConverter x:Key="GenderToUnicodeConverter"/>
+        <converters:OwnerToUnicodeConverter x:Key="OwnerToUnicodeConverter"/>
         <DataTemplate x:Name="OwnerTemplate" x:DataType="domain:Owner">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding Gender, Converter={StaticResource GenderToUnicodeConverter}}"/>
+                <TextBlock Text="{Binding Converter={StaticResource OwnerToUnicodeConverter}}"/>
                 <TextBlock Text="{Binding LastName}" FontWeight="Bold" FontSize="22"/>
                 <TextBlock Text="{Binding FirstName}" FontSize="22"/>
                 <TextBlock Text="{Binding Birthday}" FontSize="22"/>

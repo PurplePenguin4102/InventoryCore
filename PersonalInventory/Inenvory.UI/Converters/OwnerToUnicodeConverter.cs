@@ -1,4 +1,5 @@
-﻿using Inventory.Domain.Enums;
+﻿using Inventory.Domain;
+using Inventory.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +9,16 @@ using Windows.UI.Xaml.Data;
 
 namespace Inventory.UI.Converters
 {
-    public class GenderToUnicodeConverter : IValueConverter
+    public class OwnerToUnicodeConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            Gender mf = (Gender)value;
-            if (mf == Gender.Male)
+            Owner owner = (Owner)value;
+            if (owner.Type == OwnerTypes.Cat)
+            {
+                return char.ConvertFromUtf32(0x0001F431).ToString();
+            }
+            else if (owner.Gender == Gender.Male)
             {
                 return char.ConvertFromUtf32(0x0001F468).ToString();
             }
