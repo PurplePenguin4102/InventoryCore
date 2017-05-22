@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Inventory.Domain.Enums;
 
-namespace Inenvory.UI
+namespace Inventory.UI
 {
     public class MainPageModel
     {
@@ -16,7 +16,7 @@ namespace Inenvory.UI
 
         public MainPageModel()
         {
-            if (true)
+            if (DesignMode.DesignModeEnabled)
             {
                 OwnerList = new ObservableCollection<Owner>
                 {
@@ -34,7 +34,7 @@ namespace Inenvory.UI
                         LastName = "Tillack",
                         Gender = Gender.Female,
                         Type = OwnerTypes.Human,
-                        Birthday = new DateTime(1987, 07, 20)
+                        Birthday = new DateTime(1993, 05, 31)
                     },
                     new Owner
                     {
@@ -42,7 +42,7 @@ namespace Inenvory.UI
                         LastName = "Mozart",
                         Gender = Gender.Male,
                         Type = OwnerTypes.Cat,
-                        Birthday = new DateTime(1987, 07, 20)
+                        Birthday = new DateTime(2015, 03, 15)
                     },
                     new Owner
                     {
@@ -50,7 +50,7 @@ namespace Inenvory.UI
                         LastName = "Fish-Eater",
                         Gender = Gender.Female,
                         Type = OwnerTypes.Cat,
-                        Birthday = new DateTime(1987, 07, 20)
+                        Birthday = new DateTime(2015, 03, 15)
                     }
                 };
             }

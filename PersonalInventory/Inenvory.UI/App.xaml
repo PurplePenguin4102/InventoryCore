@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="Inenvory.UI.App"
+    x:Class="Inventory.UI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Inenvory.UI"
+    xmlns:local="using:Inventory.UI"
     RequestedTheme="Light">
 
 </Application>
