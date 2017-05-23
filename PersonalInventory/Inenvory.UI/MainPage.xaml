@@ -106,7 +106,8 @@
             <ListView x:Name="OwnersView" 
                       Grid.Row="1" 
                       ItemsSource="{Binding OwnerList, Mode=TwoWay}" 
-                      ItemTemplate="{StaticResource OwnerTemplate}" />
+                      ItemTemplate="{StaticResource OwnerTemplate}"
+                      SelectedItem="{Binding SelectedOwner, Mode=TwoWay}"/>
         </Grid>
         <!--<Rectangle Grid.Column="0" Fill="PaleVioletRed"/>
         <Rectangle Grid.Column="1" Fill="PowderBlue"/>-->

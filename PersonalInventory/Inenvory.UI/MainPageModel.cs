@@ -14,9 +14,21 @@ namespace Inventory.UI
     {
         public ObservableCollection<Owner> OwnerList { get; set; }
 
+        #region SelectedOwner
+        private Owner _SelectedOwner;
+        public Owner SelectedOwner
+        {
+            get => _SelectedOwner;
+            set => _SelectedOwner = value;
+        }
+        #endregion
+
         public MainPageModel()
         {
-            if (true)
+            if (!DesignMode.DesignModeEnabled)
+            {
+            }
+            else
             {
                 OwnerList = new ObservableCollection<Owner>
                 {
