@@ -16,7 +16,7 @@ namespace Inventory.UI
 
         public MainPageModel()
         {
-            if (DesignMode.DesignModeEnabled)
+            if (true)
             {
                 OwnerList = new ObservableCollection<Owner>
                 {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -12,7 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Inventory.Domain;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace Inventory.UI
@@ -25,6 +26,12 @@ namespace Inventory.UI
         public MainPage()
         {
             this.InitializeComponent();
+        }
+
+        private void Edit_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            var whatever = (Button)sender;
+            Debug.WriteLine((Owner)(whatever.DataContext));
         }
     }
 }

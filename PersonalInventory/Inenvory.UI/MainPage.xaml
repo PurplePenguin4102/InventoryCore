@@ -15,7 +15,7 @@
         <converters:OwnerToUnicodeConverter x:Key="OwnerToUnicodeConverter"/>
 
         <DataTemplate x:Name="OwnerTemplate">
-            <Grid>
+            <Grid x:Name="OwnerGrid">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition MinWidth="20"/>
                     <ColumnDefinition MinWidth="120"/>
@@ -23,6 +23,10 @@
                     <ColumnDefinition MinWidth="80"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
                 <Border Margin="0,5" Grid.Column="0">
                     <TextBlock Text="{Binding Converter={StaticResource OwnerToUnicodeConverter}}" FontSize="30" Margin="10,10"/>
                 </Border>
@@ -46,12 +50,12 @@
                     VerticalAlignment="Top" 
                     Height="43" 
                     Width="50"
-                    
                     Background="#7FFFFFFF" 
                     Foreground="#FF8BE557"
                     FontSize="24" 
                     FontWeight="Bold"
-                    Grid.Column="4"/>
+                    Grid.Column="4" 
+                    Click="Edit_Btn_Click"/>
             </Grid>
         </DataTemplate>
     </Page.Resources>
