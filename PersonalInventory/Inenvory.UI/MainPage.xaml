@@ -24,27 +24,29 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Border Margin="0,5" Grid.Column="0">
-                    <TextBlock Text="{Binding Converter={StaticResource OwnerToUnicodeConverter}}" Margin="10,10"/>
+                    <TextBlock Text="{Binding Converter={StaticResource OwnerToUnicodeConverter}}" FontSize="30" Margin="10,10"/>
                 </Border>
-                <Border Margin="0,5" Grid.Column="1">
+                <Border Margin="0,15" Grid.Column="1">
                     <TextBlock Text="{Binding LastName}" FontWeight="Bold" FontSize="22" Margin="10,4,5,8" HorizontalAlignment="Center"/>
                 </Border>
-                <Border Margin="0,5" Grid.Column="2">
+                <Border Margin="0,15" Grid.Column="2">
                     <TextBlock Text="{Binding FirstName}" FontSize="22" Margin="10,4,5,8" HorizontalAlignment="Center"/>
                 </Border>
-                <Border Margin="0,5" Grid.Column="3">
+                <Border Margin="0,15" Grid.Column="3">
                     <TextBlock Text="{Binding Birthday, ConverterParameter=Birthday, Converter={StaticResource DateTimeStringConverter}}" 
                                FontSize="22" 
-                               Margin="10, 4, 10, 8"/>
+                               Margin="10,4,10,8"
+                               Width="110"/>
                 </Border>
                 <Button
                     x:Name="Edit_Btn" 
                     Content="📝" 
                     HorizontalAlignment="Right" 
-                    Margin="0, 5" 
+                    Margin="10,15" 
                     VerticalAlignment="Top" 
                     Height="43" 
-                    Width="50" 
+                    Width="50"
+                    
                     Background="#7FFFFFFF" 
                     Foreground="#FF8BE557"
                     FontSize="24" 
