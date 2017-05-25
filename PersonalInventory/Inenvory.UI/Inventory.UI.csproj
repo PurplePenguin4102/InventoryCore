@@ -98,11 +98,14 @@
     </Compile>
     <Compile Include="Converters\DateTimeStringConverter.cs" />
     <Compile Include="Converters\OwnerToUnicodeConverter.cs" />
+    <Compile Include="InventoryContext.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPageModel.cs" />
+    <Compile Include="OwnersRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -159,15 +162,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Inventory.DataModelUniversal\Inventory.DataModelUniversal.csproj">
-      <Project>{82bcd34a-985d-44d0-b74d-670f00dab424}</Project>
-      <Name>Inventory.DataModelUniversal</Name>
-    </ProjectReference>
     <ProjectReference Include="..\inventory.Domain\Inventory.Domain.csproj">
       <Project>{89CE7D94-08E0-4FAD-9BA1-347BDF602FA6}</Project>
       <Name>Inventory.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

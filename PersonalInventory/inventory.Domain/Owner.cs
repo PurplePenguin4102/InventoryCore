@@ -15,6 +15,8 @@ namespace Inventory.Domain
         public DateTime Birthday { get; set; }
         public Gender Gender { get; set; }
         public OwnerTypes Type { get; set; }
+        public virtual List<Possession> StuffOwned { get; set; }
+        public virtual List<Todo> TasksToDo { get; set; }
 
         public override string ToString()
         {
@@ -58,7 +60,5 @@ namespace Inventory.Domain
                 Type = updated.Type;
 
         }
-        //public virtual List<Stuff> StuffOwned { get; set; }
-        //public virtual List<Task> TasksToDo { get; set; }
     }
 }

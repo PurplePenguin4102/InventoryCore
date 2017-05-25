@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Inventory.Domain.Enums;
 
+
 namespace Inventory.Domain
 {
     public class Possession
@@ -12,14 +13,14 @@ namespace Inventory.Domain
         public int Id { get; set; }
         public string Name { get; set; }
         public DateTime Acquired { get; set; }
-        //public virtual Location Location { get; set; }
-        public Owner Owner { get; set; }
         public PossessionCategory Category { get; set; }
         public string SubCategory { get; set; }
         public bool InUse { get; set; }
         public Possession PartOf { get; set; }
-        //public virtual List<Stuff> Contents { get; set; }
-        //public virtual List<Task> RequiredFor { get; set; }
+        public Owner Owner { get; set; }
+        public virtual Location Location { get; set; }
+        public virtual List<Possession> Contents { get; set; }
+        public virtual List<Todo> RequiredFor { get; set; }
 
         public override bool Equals(object obj)
         {

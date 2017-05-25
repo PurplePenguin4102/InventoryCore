@@ -11,6 +11,8 @@ namespace Inventory.Domain
         public int Id { get; set; }
         public virtual Owner OwnerInvolved { get; set; }
         public virtual Todo TaskInvolved { get; set; }
+        public virtual List<Possession> PossessionsModified { get; set; }
+        public virtual List<Location> LocationsUsed { get; set; }
         public DateTime EventCompleted { get; set; }
 
     }
