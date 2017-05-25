@@ -98,14 +98,14 @@
     </Compile>
     <Compile Include="Converters\DateTimeStringConverter.cs" />
     <Compile Include="Converters\OwnerToUnicodeConverter.cs" />
-    <Compile Include="InventoryContext.cs" />
+    <Compile Include="DataModel\InventoryContext.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPageModel.cs" />
-    <Compile Include="OwnersRepo.cs" />
+    <Compile Include="DataModel\RepositoryClasses\OwnersRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryFactory.cs" />
+    <Compile Include="DataModel\RepositoryFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
