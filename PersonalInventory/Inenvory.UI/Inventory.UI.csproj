@@ -99,6 +99,7 @@
     <Compile Include="Converters\DateTimeStringConverter.cs" />
     <Compile Include="Converters\OwnerToUnicodeConverter.cs" />
     <Compile Include="DataModel\InventoryContext.cs" />
+    <Compile Include="DataModel\RepositoryClasses\PossessionsRepo.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
