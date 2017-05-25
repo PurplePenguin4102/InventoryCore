@@ -108,11 +108,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="InventoryContext.cs" />
-    <Compile Include="Migrations\20170325060734_New_Sqlite_With_Locations.cs" />
-    <Compile Include="Migrations\20170325060734_New_Sqlite_With_Locations.designer.cs">
-      <DependentUpon>20170325060734_New_Sqlite_With_Locations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\InventoryContextModelSnapshot.cs" />
     <Compile Include="RepositoryClasses\PossessionsRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryClasses\OwnersRepo.cs" />
@@ -124,6 +119,9 @@
       <Project>{89ce7d94-08e0-4fad-9ba1-347bdf602fa6}</Project>
       <Name>Inventory.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
