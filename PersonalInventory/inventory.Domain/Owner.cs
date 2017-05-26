@@ -16,7 +16,7 @@ namespace Inventory.Domain
         public Gender Gender { get; set; }
         public OwnerTypes Type { get; set; }
         public virtual List<Possession> StuffOwned { get; set; }
-        public virtual List<Todo> TasksToDo { get; set; }
+        public virtual List<OwnerTodos> TasksToDo { get; set; }
 
         public override string ToString()
         {
