@@ -11,7 +11,7 @@ namespace Inventory.Domain
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        public DateTime DueForCompletion { get; set; }
+        public DateTime DueForCompletion { get; set; } 
         public virtual List<Possession> StuffRequired { get; set; }
         public virtual List<OwnerTodos> PeopleAssigned { get; set; }
         public bool IsComplete { get; set; }
