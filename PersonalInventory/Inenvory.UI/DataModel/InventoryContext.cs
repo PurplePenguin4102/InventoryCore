@@ -13,7 +13,7 @@ namespace Inventory.DataModel
         public DbSet<OwnerTodos> OwnerTodos { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         { 
-            optionsBuilder.UseSqlite("Data Source=inventory.db");
+            optionsBuilder.UseSqlite("Data Source=inventory.db"); 
         }
     }
 }
